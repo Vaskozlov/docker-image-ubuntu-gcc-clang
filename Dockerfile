@@ -1,6 +1,11 @@
 # syntax=docker/dockerfile:1
 
-FROM ubuntu:noble
+FROM --platform=${BUILDPLATFORM:-linux/amd64} ubuntu:noble as builder
+ARG TARGETPLATFORM
+ARG BUILDPLATFORM
+ARG TARGETOS
+ARG TARGETARCH
+
 LABEL authors="vaskozlov"
 
 RUN apt-get update
