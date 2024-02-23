@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM --platform=${BUILDPLATFORM:-linux/amd64} ubuntu:noble as builder
+FROM ubuntu:noble
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 ARG TARGETOS
