@@ -12,8 +12,8 @@ RUN apt install -y libc++abi-dev libc++-dev
 RUN apt install -y clang-tidy-18
 RUN apt install -y cmake
 RUN apt install -y ninja-build
-RUN apt install -y gdb gdb-13
-RUN apt install -y lldb lldb-18
+RUN apt install -y gdb
+RUN apt install -y lldb
 RUN apt install -y zip unzip
 RUN apt install -y curl
 RUN apt install -y catch2
