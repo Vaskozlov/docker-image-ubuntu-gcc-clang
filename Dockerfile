@@ -13,6 +13,7 @@ RUN apt install -y git
 RUN apt install -y gcc-14 g++-14
 RUN apt install -y libstdc++-14-dev
 RUN apt install -y clang-18
+RUN apt install -y pkg-config
 RUN apt install -y libc++abi-dev libc++-dev
 RUN apt install -y clang-tidy-18
 RUN apt install -y cmake
