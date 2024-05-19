@@ -13,7 +13,6 @@ RUN apt install -y git
 RUN apt install -y gcc-14 g++-14
 RUN apt install -y libstdc++-14-dev
 RUN apt install -y clang-18
-RUN apt install -y pkg-config
 RUN apt install -y libc++abi-dev libc++-dev
 RUN apt install -y clang-tidy-18
 RUN apt install -y cmake
@@ -26,6 +25,7 @@ RUN apt install -y catch2
 RUN apt install -y libfmt-dev
 RUN apt install -y libcxxopts-dev
 RUN apt install -y libbenchmark-dev
+RUN apt-get install --reinstall -y pkg-config cmake-data
 
 RUN git clone https://github.com/llvm/llvm-project.git
 RUN cmake -S /llvm-project/llvm -B /llvm-build -G Ninja -DLLVM_ENABLE_PROJECTS='clang;compiler-rt' -DLLVM_ENABLE_RUNTIMES='all' -DLLVM_TARGETS_TO_BUILD='AArch64;X86' -DLLVM_INCLUDE_TESTS=OFF -DLIBCXX_INSTALL_MODULES=ON -DCMAKE_C_COMPILER=/usr/bin/clang-18 -DCMAKE_CXX_COMPILER=/usr/bin/clang++-18 -DCMAKE_BUILD_TYPE=Release
