@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ubuntu:noble
+FROM ubuntu:latest
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 ARG TARGETOS
