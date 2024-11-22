@@ -22,7 +22,6 @@ RUN apt install -y lldb
 RUN apt install -y zip unzip
 RUN apt install -y curl
 RUN apt install -y catch2
-RUN apt install -y libfmt-dev
 RUN apt install -y libcxxopts-dev
 RUN apt install -y libbenchmark-dev
 RUN apt-get install --reinstall -y pkg-config cmake-data
